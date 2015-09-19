@@ -21,3 +21,6 @@ exports.cookieEncryptionKey = "YOUR_ENCRYPTION_KEY";
 exports.youtubeKey = "YOUR_YOUTUBE_API_KEY"`
 
 Now Simply run `node app.js`
+
+## Demo 
+This app is live at http://ec2-54-254-218-53.ap-southeast-1.compute.amazonaws.com:3000
