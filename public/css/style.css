@@ -94,3 +94,7 @@ element.style {
     padding: 8px;
     margin: 8px;
 }
+
+.load-more-stories {
+    width: 100%;
+}
