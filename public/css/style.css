@@ -83,3 +83,14 @@ element.style {
 .navbar li  {
     padding: 10px 10px 5px 10px;
 }
+
+.story-description {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.feed {
+    background-color: #f7f7f9;
+    padding: 8px;
+    margin: 8px;
+}
