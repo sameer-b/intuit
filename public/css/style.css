@@ -101,3 +101,7 @@ box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
 .load-more-stories {
     width: 100%;
 }
+
+.label-success{
+    font-size: 10px
+}
