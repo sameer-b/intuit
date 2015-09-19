@@ -58,8 +58,8 @@ app.get('/test',function(request,response){
     'house': 3220,
     'children': 200
   };
-  intuit.saveClickedStories(count,'bs.sameer1@gmail.com')
-  intuit.saveTotalStories(count,'bs.sameer1@gmail.com')
+/*  intuit.saveClickedStories(count,'bs.sameer1@gmail.com')
+  intuit.saveTotalStories(count,'bs.sameer1@gmail.com')*/
 });
 
 /*
