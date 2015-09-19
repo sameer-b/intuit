@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+	head
+		include ./head.jade
+		title Login - eCommIt
+body
+	.container
+		include ./nav.jade
+		- if ( typeof(message) != 'undefined'){
+		p.alert.alert-danger #{message}
+		-}
+		form.form-signin(action='/authUser', method='POST')
+			div.form-group
+				h2.form-signin-heading Please sign in
+				input.form-control.input-block-level(type='text', name = 'email', placeholder='Email address')
+				input.form-control.input-block-level(type='password', name = 'password' , placeholder='Password')
+				div
+					label Remember Me 
+						input(type='checkbox', name='rememberMe')
+				button.btn.btn-default(type='submit') Sign in
