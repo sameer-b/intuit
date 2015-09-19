@@ -52,6 +52,14 @@ app.post('/getMoreStories', function (request,response){
 	intuit.getMoreFeeds(request, response);
 });
 
+app.get('/test',function(request,response){
+  var count = {
+    'name': 2220,
+    'age': 3220
+  };
+  intuit.saveClickedStories(count,'bs.sameer1@gmail.com')
+});
+
 /*
  * Routes end
  */
