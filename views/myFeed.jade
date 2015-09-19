@@ -7,8 +7,11 @@ body
 		include ./nav.jade
 		each feed in data
 			div.feed
-				h3 #{feed.title}
-				img(src=feed.thumbnail)
-				p.story-description !{feed.description}
+				if (feed.type == 'youtube')
+					iframe(src='#{feed.url}')
+				else	
+					h3 #{feed.title}
+					img(src=feed.thumbnail)
+					p.story-description !{feed.description}
 		div.text-center
 			button.load-more-stories.btn.btn-default.btn-lg	Load More Stories	
