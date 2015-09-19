@@ -10,8 +10,10 @@ body
 				if (feed.type == 'youtube')
 					iframe(src='#{feed.url}')
 				else	
-					h3 #{feed.title}
-					img(src=feed.thumbnail)
-					p.story-description !{feed.description}
+					div
+						h3 #{feed.title} 
+						span.badge #{feed.category}
+						img(src=feed.thumbnail)
+						p.story-description !{feed.description}
 		div.text-center
 			button.load-more-stories.btn.btn-default.btn-lg	Recommend more stories
