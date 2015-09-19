@@ -4,11 +4,12 @@ var um = require('./lib/userManagement.js');
 var intuit = require('./lib/intuit.js');
 var path = require('path');
 var app = express();
-app.use(cookieParser());
+
 
 /**
  *Configure express
  */
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -47,7 +48,7 @@ app.get('/myFeed', function (request, response) {
 	}
 });
 
-app.get('/getMoreStories', function (request,response){
+app.post('/getMoreStories', function (request,response){
 	intuit.getMoreFeeds(request, response);
 });
 
@@ -59,5 +60,5 @@ app.get('/getMoreStories', function (request,response){
  * Setup server
  */
 var server = app.listen(3000, function () {
-  console.log('Starting eCommIt! ');
+  console.log('Starting Intuit! ');
 });

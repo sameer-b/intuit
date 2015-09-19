@@ -6,7 +6,7 @@ body
 	.container
 		include ./nav.jade
 		each feed in data
-			div.feed
+			div.feed(category='#{feed.category}')
 				if (feed.type == 'youtube')
 					iframe(src='#{feed.url}')
 				else	
@@ -14,4 +14,4 @@ body
 					img(src=feed.thumbnail)
 					p.story-description !{feed.description}
 		div.text-center
-			button.load-more-stories.btn.btn-default.btn-lg	Load More Stories	
+			button.load-more-stories.btn.btn-default.btn-lg	Recommend more stories
