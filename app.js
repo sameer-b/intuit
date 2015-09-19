@@ -54,10 +54,12 @@ app.post('/getMoreStories', function (request,response){
 
 app.get('/test',function(request,response){
   var count = {
-    'name': 2220,
-    'age': 3220
+    'married': 2220,
+    'house': 3220,
+    'children': 200
   };
   intuit.saveClickedStories(count,'bs.sameer1@gmail.com')
+  intuit.saveTotalStories(count,'bs.sameer1@gmail.com')
 });
 
 /*
