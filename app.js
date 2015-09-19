@@ -52,14 +52,14 @@ app.post('/getMoreStories', function (request,response){
 	intuit.getMoreFeeds(request, response);
 });
 
-app.get('/test',function(request,response){
-  var count = {
-    'married': 2220,
-    'house': 3220,
-    'children': 200
-  };
-/*  intuit.saveClickedStories(count,'bs.sameer1@gmail.com')
-  intuit.saveTotalStories(count,'bs.sameer1@gmail.com')*/
+app.get('/',function(request,response){
+  var userCookie = request.cookies;
+  if( ((typeof userCookie.ecommit_email)==='undefined') || ((typeof userCookie.ecommit_passwordHash)==='undefined') ) {
+    response.render('login',{message: "Please Login"} );
+    return false; // user is not logged in
+  }else {
+    response.redirect('/myFeed');
+  }
 });
 
 /*

@@ -93,9 +93,9 @@ element.style {
     background-color: #f7f7f9;
     padding: 8px;
     margin: 8px;
--webkit-box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
--moz-box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
-box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
+    -moz-box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
+    box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
 }
 
 .load-more-stories {
@@ -104,4 +104,22 @@ box-shadow: 6px 15px 34px -15px rgba(0,0,0,0.33);
 
 .label-success{
     font-size: 10px
+}
+
+.feed:hover {
+    cursor: pointer;
+}
+
+
+
+.form-group {
+    background-color: #f7f7f9;
+    padding: 60px;
+    border-radius: 5px;
+    width: 40%;
+    margin: auto;
+}
+
+.form-group input {
+    margin: 10px;
 }

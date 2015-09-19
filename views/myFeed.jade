@@ -6,12 +6,20 @@ body
 	.container
 		include ./nav.jade
 		each feed in data
-			div.feed(category='#{feed.category}')
+			div.feed(category='#{feed.category}', data-url='#{feed.url}')
+
 				if (feed.type == 'youtube')
 					iframe(src='#{feed.url}')
-				else	
-					h3 #{feed.title} 
+					if(feed.category == 'married')
+						span.label.label-success marriage
+					else
 						span.label.label-success #{feed.category}
+				else	
+					h3 #{feed.title}						
+						if(feed.category == 'married')
+							span.label.label-success marriage
+						else
+							span.label.label-success #{feed.category}
 					img(src=feed.thumbnail)
 					p.story-description !{feed.description}
 		div.text-center
