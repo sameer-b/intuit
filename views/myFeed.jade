@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+	head
+		include ./head.jade
+body
+	.container
+		include ./nav.jade
+		each feed in data
+			div.feed
+				h1 {{feed.title}}
+				img(src=feed.thumbnail)
+				p.story-description feed.description
