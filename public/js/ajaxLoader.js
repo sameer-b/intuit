@@ -9,7 +9,7 @@
  */
 var youtubeBaseUrl = "http://www.youtube.com/embed/";
 $(document).ready(function(){
-
+  sessionStorage.clear();
   /**
    * Setup event hanlder on Recommend More Stories button.
    */
@@ -34,6 +34,7 @@ $(document).ready(function(){
        * @param  {JSON} User preferences.
        */
       $.post( "/getMoreStories", userInterest, function( data ) {
+
         _.each(data,function(ele){
           //Construct each div for feed
           var feed = document.createElement('div');
@@ -75,6 +76,7 @@ $(document).ready(function(){
           $('.feed').last().after(feed);
           
         });
+        sessionStorage.clear();
     });
     } else {
       console.log("Sorry your browser does not support localStorage");
