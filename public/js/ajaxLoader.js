@@ -77,6 +77,7 @@ $(document).ready(function(){
           
         });
         sessionStorage.clear();
+        bindAll();
     });
     } else {
       console.log("Sorry your browser does not support localStorage");
@@ -88,17 +89,22 @@ $(document).ready(function(){
  * Record user clicks on each article.
  * Once the click metric is recorede open the article for the user in a new tab.
  */
-  $('.feed').click(function() {
-      var category = $(this).attr('category');
-      if(typeof(Storage) !== "undefined") {
-        if(sessionStorage[category]) {
-          sessionStorage[category] = Number(sessionStorage[category]) + 1;
+  function bindAll() {
+    $('.feed').click(function() {
+        var category = $(this).attr('category');
+        if(typeof(Storage) !== "undefined") {
+          if(sessionStorage[category]) {
+            sessionStorage[category] = Number(sessionStorage[category]) + 1;
+          }else {
+            sessionStorage[category] = 1;
+          }               
         }else {
-          sessionStorage[category] = 1;
-        }               
-      }else {
-        console.log("Please update your browser");
-      }
-      var win = window.open( $(this).attr('data-url'),'_blank');
-  });
+          console.log("Please update your browser");
+        }
+        var win = window.open( $(this).attr('data-url'),'_blank');
+    });
+  }
+
+  bindAll();
+
 });
