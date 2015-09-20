@@ -45,7 +45,7 @@ $(document).ready(function(){
           //Render the article
           if(ele.type == 'youtube') {
             var iframe = document.createElement('iframe');            
-            iframe.setAttribute('src',youtubeBaseUrl+ele.url);            
+            iframe.setAttribute('src',ele.url);            
             feed.appendChild(iframe);
             if (ele.category == "married")
               $(feed).append("<span class='label label-success'> marriage </span>");
